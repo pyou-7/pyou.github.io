@@ -1,298 +1,429 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <title>Jialin You's Portfolio Page</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-    <style>
-        .custom-icon-size {
-            font-size: 3em; /* Adjust this value to make the icon larger or smaller */
-        }
-        .projects-container, .dashboards-container {
-            display: flex;
-            flex-direction: row;
-            overflow: hidden;
-            position: relative;
-        }
-        .project, .dashboard {
-            flex: 0 0 100%;
-            display: none;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-        }
-        .project.active, .dashboard.active {
-            display: block;
-            opacity: 1;
-        }
-        .scroll-button {
-            color: white;
-            height: 60px;
-            width: 60px;
-            line-height: 58px;
-            text-align: center;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            cursor: pointer;
-            z-index: 10;
-            font-size: 3em;
-        }
-        .scroll-button.left {
-            left: -80px; /* Adjust this value to move the button outside the black box */
-        }
-        .scroll-button.right {
-            right: -80px; /* Adjust this value to move the button outside the black box */
-        }
-        .contact-info {
-            margin: 2em 0;
-        }
-        .contact-info .item {
-            margin-bottom: 1.5em;
-        }
-        .contact-info .label {
-            font-weight: bold;
-            font-size: 1.2em;
-            margin-bottom: 0.5em;
-            display: block;
-        }
-        .contact-info .value {
-            font-size: 1.2em;
-            text-decoration: underline;
-        }
-        .contact-info .social-icons {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-        }
-        .contact-info .social-icons li {
-            margin-right: 1em;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jialin You | Data Engineer</title>
+    <meta name="description"
+        content="Portfolio of Jialin You, a Data Engineer and Analytics Engineer specializing in Python, SQL, and Cloud Technologies.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 </head>
-<body class="is-preload">
 
-    <!-- Wrapper -->
-    <div id="wrapper">
+<body>
 
-        <!-- Header -->
-        <header id="header">
-            <div class="logo">
-                <i class="icon fa-gem"></i>
-            </div>
-            <div class="content">
-                <div class="inner">
-                    <h1>Jialin You Portfolio</h1>
-                    <p>Unlocking the potential of data through insightful engineering and analysis.</p>
-                </div>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#intro">Intro</a></li>
-                    <li><a href="#work">Projects</a></li>
-                    <li><a href="#dashboard">Dashboard</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Jialin You</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact" class="nav-cta">Contact Me</a></li>
+        </ul>
+    </nav>
 
-        <!-- Main -->
-        <div id="main">
-
-            <!-- Intro -->
-            <article id="intro">
-                <h2 class="major">Intro</h2>
-                <span class="image main"><img src="images/You_Patrick-006.jpg" alt="" /></span>
-                <p>Hello! I'm Jialin You, an Analytics Engineer with a passion for transforming raw data into meaningful insights. Currently, I'm pursuing a Master of Science in Business Analytics at UCLA Anderson, where I've developed a strong foundation in machine learning, data modeling, and statistical analysis. My technical skills include Python, SQL, and Java. I'm proficient in cloud computing platforms such as AWS, Azure, and GCP, and have experience with database storage solutions like Databricks and Snowflake. Throughout various internships and projects, I have optimized data processing and analysis workflows using both modern ETL and ELT data engineering solutions.</p>
-                <p>My professional experience includes internships at Data-Sleek and Global Music Rights as a Data Engineer and Business Intelligence Engineer respectively, where I have successfully built and maintained ETL pipelines, automated data extraction, and developed interactive dashboards in both Tableau and Power BI. I have worked extensively with tools such as Apache Spark, Airflow, and Azure Data Factory to enhance data integration processes. I am committed to leveraging my skills to solve complex data challenges and contribute to data-driven decision-making. Explore my portfolio to see the impactful projects I've worked on and learn more about my journey in data engineering/data science!</p>
-            </article>
-
-            <!-- Work -->
-            <article id="work">
-                <h2 class="major">Projects</h2>
-                <div class="projects-container" id="projects-container">
-                    <div class="project active">
-                        <header>
-                            <h2><a href="https://github.com/pyou-7/Machine-Learning-Final-Project/blob/main/MSBA_401_Final_Project_Group6.ipynb" target="_blank">Credit Default Prediction</a></h2>
-                        </header>
-                        <a href="https://github.com/pyou-7/Machine-Learning-Final-Project/blob/main/MSBA_401_Final_Project_Group6.ipynb" target="_blank" class="image fit"><img src="images/creditdefault.png" alt="" /></a>
-                        <p>Implemented a Neural Network model using Keras to forecast credit card default payments and enhanced model efficacy through GridSearchCV for hyperparameter optimization, improving model accuracy by 12%</p>
-                        <ul class="actions special">
-                            <li><a href="https://github.com/pyou-7/Machine-Learning-Final-Project/blob/main/MSBA_401_Final_Project_Group6.ipynb" target="_blank" class="button">View Project</a></li>
-                        </ul>
-                    </div>
-                    <div class="project">
-                        <header>
-                            <h2><a href="https://github.com/pyou-7/SQL-Data-Cleaning-Projects" target="_blank">Data Cleaning with SQL</a></h2>
-                        </header>
-                        <a href="https://github.com/pyou-7/SQL-Data-Cleaning-Projects" target="_blank" class="image fit"><img src="images/data_cleaning_sql.jpg" alt="" /></a>
-                        <p>In these projects, I leveraged advanced SQL techniques to clean and standardize datasets from various sources. These projects demonstrate my SQL proficiency in data preprocessing, ensuring data accuracy and consistency.</p>
-                        <ul class="actions special">
-                            <li><a href="https://github.com/pyou-7/SQL-Data-Cleaning-Projects" target="_blank" class="button">View Project</a></li>
-                        </ul>
-                    </div>
-                    <div class="project">
-                        <header>
-                            <h2><a href="https://github.com/pyou-7/SQL-Data-Analysis-Projects/tree/main" target="_blank">Data Analysis with SQL</a></h2>
-                        </header>
-                        <a href="https://github.com/pyou-7/SQL-Data-Analysis-Projects/tree/main" target="_blank" class="image fit"><img src="images/data_analysis_sql.jpg" alt="" /></a>
-                        <p>In these projects, I leveraged SQL to analyze and visualize various datasets. These projects demonstrate proficiency in SQL for extracting insights from complex datasets and making data ready for reporting and decision-making.</p>
-                        <ul class="actions special">
-                            <li><a href="https://github.com/pyou-7/SQL-Data-Analysis-Projects/tree/main" target="_blank" class="button">View Project</a></li>
-                        </ul>
-                    </div>
-                    <div class="project">
-                        <header>
-                            <h2><a href="https://github.com/pyou-7/Impact-of-Covid-19-on-Different-Industries-in-the-U.S./tree/main" target="_blank">COVID-19 Impact Analysis</a></h2>
-                        </header>
-                        <a href="https://github.com/pyou-7/Impact-of-Covid-19-on-Different-Industries-in-the-U.S./tree/main" target="_blank" class="image fit"><img src="images/Covid.jpg" alt="" /></a>
-                        <p>Collected and analyzed COVID-19 data using Python. Key tasks included data collection from public APIs, preprocessing for accuracy, and performing exploratory data analysis (EDA) to uncover key insights and trends, showcasing skills in data collection, cleaning, analysis, and visualization.</p>
-                        <ul class="actions special">
-                            <li><a href="https://github.com/pyou-7/Impact-of-Covid-19-on-Different-Industries-in-the-U.S./tree/main" target="_blank" class="button">View Project</a></li>
-                        </ul>
-                    </div>
-                    <div class="project">
-                        <header>
-                            <h2><a href="https://github.com/pyou-7/movie-correlation-analysis/blob/main/Movie%20Portfolio%20Project.ipynb" target="_blank">Movies Correlation Analysis</a></h2>
-                        </header>
-                        <a href="https://github.com/pyou-7/movie-correlation-analysis/blob/main/Movie%20Portfolio%20Project.ipynb" target="_blank" class="image fit"><img src="images/movies.jpg" alt="" /></a>
-                        <p>This project involves a comprehensive analysis of a movie dataset using Python. The goal is to understand relationships between various movie features through visualizations. The project leverages libraries such as Pandas, NumPy, Seaborn, and Matplotlib to perform data manipulation and create insightful visualizations.</p>
-                        <ul class="actions special">
-                            <li><a href="https://github.com/pyou-7/movie-correlation-analysis/blob/main/Movie%20Portfolio%20Project.ipynb" target="_blank" class="button">View Project</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="scroll-button left" id="scroll-left">&lt;</div>
-                <div class="scroll-button right" id="scroll-right">&gt;</div>
-            </article>
-
-            <!-- Dashboard -->
-            <article id="dashboard">
-                <h2 class="major">Dashboards</h2>
-                <div class="dashboards-container" id="dashboards-container">
-                    <div class="dashboard active">
-                        <header>
-                            <h2><a href="https://public.tableau.com/app/profile/jialin.you7828/viz/UCLARentalPerformanceDashboard_17096925711060/RentalPerformance2" target="_blank">Rental Performance Dashboard</a></h2>
-                        </header>
-                        <a href="https://public.tableau.com/app/profile/jialin.you7828/viz/UCLARentalPerformanceDashboard_17096925711060/RentalPerformance2" target="_blank" class="image fit"><img src="images/Rental Performance.png" alt="Visualization 1" /></a>
-                        <p>This dashboard provides insights into rental performance, including daily rentals, film categories, and rental details.</p>
-                        <ul class="actions special">
-                            <li><a href="https://public.tableau.com/app/profile/jialin.you7828/viz/UCLARentalPerformanceDashboard_17096925711060/RentalPerformance2" target="_blank" class="button">View Visualization</a></li>
-                        </ul>
-                    </div>
-                    <div class="dashboard">
-                        <header>
-                            <h2><a href="https://public.tableau.com/app/profile/jialin.you7828/viz/MSBA405SAKILACustomersIn-DepthAnalysis/Dashboard1" target="_blank">Customers In-Depth Analysis</a></h2>
-                        </header>
-                        <a href="https://public.tableau.com/app/profile/jialin.you7828/viz/MSBA405SAKILACustomersIn-DepthAnalysis/Dashboard1" target="_blank" class="image fit"><img src="images/Dashboard 2.png" alt="Visualization 2" /></a>
-                        <p>This dashboard offers a comprehensive analysis of SAKILA customers, focusing on customer segmentation and behavior.</p>
-                        <ul class="actions special">
-                            <li><a href="https://public.tableau.com/app/profile/jialin.you7828/viz/MSBA405SAKILACustomersIn-DepthAnalysis/Dashboard1" target="_blank" class="button">View Visualization</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="scroll-button left" id="scroll-left-dashboard">&lt;</div>
-                <div class="scroll-button right" id="scroll-right-dashboard">&gt;</div>
-            </article>
-
-           <!-- Contact -->
-		   <article id="contact">
-			<h2 class="major">Contact</h2>
-			<div class="contact-details">
-				<div class="detail">
-					<h3 class="label">Location</h3>
-					<p>Los Angeles, CA 90024</p>
-				</div>
-				<div class="detail">
-					<h3 class="label">Email</h3>
-					<p>jialin.you.2024@anderson.ucla.edu</a></p>
-				</div>
-				<div class="detail">
-					<h3 class="label">Social</h3>
-					<ul class="icons">
-						<li><a href="https://www.linkedin.com/in/jialin-you/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-						<li><a href="https://github.com/pyou-7" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-					</ul>
-				</div>
-			</div>
-		</article>
-
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-badge">Data Engineer & Analytics Specialist</div>
+        <h1 class="hero-title">Turning Complex Data Into <br><span>Business Insights</span></h1>
+        <p class="hero-subtitle">
+            I build scalable data pipelines, optimize storage architectures, and design interactive dashboards that
+            transform complex data into actionable strategic insights.
+        </p>
+        <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="#contact" class="btn btn-secondary">Get in Touch</a>
         </div>
+    </section>
 
-        <!-- Footer -->
-        <footer id="footer">
-        </footer>
-
+    <!-- Trust Signals -->
+    <div class="trust-section">
+        <p class="trust-text">Delivering impact across industries</p>
+        <div class="trust-logos">
+            <span>Education</span>
+            <span>Consulting</span>
+            <span>Entertainment</span>
+            <span>Retail</span>
+            <span>Technology</span>
+        </div>
     </div>
 
-    <!-- BG -->
-    <div id="bg"></div>
+    <!-- About Section -->
+    <section id="about">
+        <div class="about-grid">
+            <div class="about-image-wrapper">
+                <img src="images/You_Patrick-006.jpg" alt="Jialin You" class="about-image">
+            </div>
+            <div class="about-content">
+                <span class="section-tag">About Me</span>
+                <h2 class="section-title">Analytics Engineer</h2>
+                <p class="section-desc" style="margin: 0 0 2rem 0; text-align: left;">
+                    I am an Analytics Engineer with 2 years of experience spanning the full data lifecycle, including
+                    roles in Data Engineering, Analytics Engineering, and Business Intelligence. I specialize in
+                    building scalable infrastructure and transforming complex datasets into actionable business
+                    insights. With an M.S. in Business Analytics from UCLA Anderson, I bring a comprehensive technical
+                    skillset to drive data-driven decision making.
+                </p>
+            </div>
+        </div>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script>
-        $(document).ready(function() {
-            let currentProjectIndex = 0;
-            const projects = $('.project');
-            const totalProjects = projects.length;
+        <!-- Experience Section -->
+        <div style="max-width: 800px; margin: 4rem auto 0;">
+            <h2 class="section-title" style="text-align: center;">Professional Experiences</h2>
+            <div class="experience-list">
+                <!-- Role 1 -->
+                <div class="exp-card">
+                    <div class="exp-header">
+                        <span class="exp-role">Business Intelligence Analyst</span>
+                        <span class="exp-date">Jan 2025 - Apr 2025</span>
+                    </div>
+                    <div class="exp-company">Groundworks</div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem;">
+                        Analyzed business performance metrics and generated actionable data insights.
+                    </p>
+                </div>
 
-            let currentDashboardIndex = 0;
-            const dashboards = $('.dashboard');
-            const totalDashboards = dashboards.length;
+                <!-- Role 2 -->
+                <div class="exp-card">
+                    <div class="exp-header">
+                        <span class="exp-role">Data Engineer</span>
+                        <span class="exp-date">Jun 2024 - Dec 2024</span>
+                    </div>
+                    <div class="exp-company">Data-Sleek</div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem;">
+                        Building scalable data infrastructure and optimizing ETL pipelines.
+                    </p>
+                </div>
 
-            function showProject(index) {
-                projects.removeClass('active').fadeOut();
-                $(projects[index]).fadeIn().addClass('active');
-            }
+                <!-- Role 3 -->
+                <div class="exp-card">
+                    <div class="exp-header">
+                        <span class="exp-role">Business Intelligence Engineer</span>
+                        <span class="exp-date">May 2024 - Aug 2024</span>
+                    </div>
+                    <div class="exp-company">Global Music Rights</div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem;">
+                        Developed BI solutions and interactive dashboards for music rights management.
+                    </p>
+                </div>
 
-            function showDashboard(index) {
-                dashboards.removeClass('active').fadeOut();
-                $(dashboards[index]).fadeIn().addClass('active');
-            }
+                <!-- Role 4 -->
+                <div class="exp-card">
+                    <div class="exp-header">
+                        <span class="exp-role">Data Analyst</span>
+                        <span class="exp-date">Jun 2022 - Sep 2022</span>
+                    </div>
+                    <div class="exp-company">Monster Energy</div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem;">
+                        Supported sales operations with data analysis and reporting automation.
+                    </p>
+                </div>
+            </div>
+        </div>
 
-            $('#scroll-right').click(function() {
-                currentProjectIndex = (currentProjectIndex + 1) % totalProjects;
-                showProject(currentProjectIndex);
-            });
+        <!-- Education Section -->
+        <div style="max-width: 800px; margin: 4rem auto 0;">
+            <h2 class="section-title" style="text-align: center;">Education</h2>
+            <div class="experience-list">
+                <!-- Education 1 -->
+                <div class="exp-card">
+                    <div class="exp-header">
+                        <span class="exp-role">Data Engineering Bootcamp</span>
+                        <span class="exp-date">Nov 2024 - Feb 2025</span>
+                    </div>
+                    <div class="exp-company">ECZACHLY’S DATA ENGINEERING BOOTCAMP by Zach Wilson</div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem;">
+                        Intensive hands-on training in modern data engineering stack (AWS, Airflow, dbt, Snowflake).
+                    </p>
+                </div>
 
-            $('#scroll-left').click(function() {
-                currentProjectIndex = (currentProjectIndex - 1 + totalProjects) % totalProjects;
-                showProject(currentProjectIndex);
-            });
+                <!-- Education 2 -->
+                <div class="exp-card">
+                    <div class="exp-header">
+                        <span class="exp-role">M.S. Business Analytics</span>
+                        <span class="exp-date">Sep 2023 - Dec 2024</span>
+                    </div>
+                    <div class="exp-company">UCLA Anderson School of Management</div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem;">
+                        Focus on Data Science, Machine Learning, and Business Strategy.
+                    </p>
+                </div>
 
-            $('#scroll-right-dashboard').click(function() {
-                currentDashboardIndex = (currentDashboardIndex + 1) % totalDashboards;
-                showDashboard(currentDashboardIndex);
-            });
+                <!-- Education 3 -->
+                <div class="exp-card">
+                    <div class="exp-header">
+                        <span class="exp-role">B.A. Business Economics</span>
+                        <span class="exp-date">Sep 2019 - Jun 2023</span>
+                    </div>
+                    <div class="exp-company">University of California, Irvine</div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem;">
+                        Specialization in Quantitative Economics and Data Analysis.
+                    </p>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
 
-            $('#scroll-left-dashboard').click(function() {
-                currentDashboardIndex = (currentDashboardIndex - 1 + totalDashboards) % totalDashboards;
-                showDashboard(currentDashboardIndex);
-            });
+    <!-- Skills Section -->
+    <section id="skills" style="background: var(--bg-secondary);">
+        <div class="section-header">
+            <span class="section-tag">Skills</span>
+            <h2 class="section-title">Technical Arsenal</h2>
+            <p class="section-desc">My technical toolkit for building robust data solutions.</p>
+        </div>
 
-            // Auto-scroll for projects
-            setInterval(function() {
-                currentProjectIndex = (currentProjectIndex + 1) % totalProjects;
-                showProject(currentProjectIndex);
-            }, 10000); // 10 seconds
+        <div class="skills-grid">
+            <!-- Skill Category 1 -->
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3 class="skill-title">Languages</h3>
+                <ul class="skill-list">
+                    <li><i class="devicon-python-plain colored"></i> Python</li>
+                    <li><i class="devicon-mysql-original colored"></i> SQL</li>
+                    <li><i class="devicon-r-plain colored"></i> R</li>
+                    <li><i class="devicon-javascript-plain colored"></i> JavaScript</li>
+                </ul>
+            </div>
 
-            // Auto-scroll for dashboards
-            setInterval(function() {
-                currentDashboardIndex = (currentDashboardIndex + 1) % totalDashboards;
-                showDashboard(currentDashboardIndex);
-            }, 10000); // 10 seconds
+            <!-- Skill Category 2 -->
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <i class="fas fa-database"></i>
+                </div>
+                <h3 class="skill-title">Data Engineering</h3>
+                <ul class="skill-list">
+                    <li><i class="devicon-amazonwebservices-plain-wordmark colored"></i> AWS
+                    </li>
+                    <li><i class="devicon-azure-plain colored"></i> Azure</li>
+                    <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                            style="width: 30px; height: 1.2rem; display: inline-block; vertical-align: middle; margin-right: 10px; fill: #29B5E8;">
+                            <path
+                                d="M11.654.174V2.377H9.682v.58h1.972V5.16h.696V2.957h1.97v-.58h-1.97V.174h-.348zm6.03 2.262l-.002 1.623v1.623h-2.957v.927h2.957v3.188H18.725l.011-1.582.02-1.576 1.465-.02 1.46-.01v-.927H18.728V2.436h-.522zm-12.407.06V5.686H2.291v.925H5.277V9.801h.985V6.61h3.013v-.925H6.262V2.496H5.77zm6.086 5.27v3.593H8.06v1.188h3.304v3.596h1.28v-3.596H15.953v-1.188H12.643V7.766h-.637zm9.721 1.55v2.221h-2.012v.811h2.012v2.261h.887v-2.261H24v-.811h-2.029V9.317h-.422zm-19.111.131V11.621H0v.621H1.973v2.194H2.64v-2.194h2v-.62H2.609V9.446h-.318zm15.709 4.516v3.254h-3.016v.927h3.016v3.217h1.072v-3.216H21.74v-.928H18.754v-3.254h-.533zm-12.463.008v3.246H2.262v.928h2.957v3.189H6.32v-3.189h2.955v-.928H6.32V13.97h-.55zm6.316 4.578l.002 1.103v1.1H9.566v.812h1.971v2.262h.928l.012-1.119.017-1.143H14.463v-.812h-2V18.549h-.465z" />
+                        </svg> Snowflake</li>
+                    <li><i class="devicon-apacheairflow-plain colored"></i> Airflow</li>
+                    <li><i class="devicon-docker-plain colored"></i> Docker</li>
+                </ul>
+            </div>
 
-            // Initially show the first project and dashboard
-            showProject(currentProjectIndex);
-            showDashboard(currentDashboardIndex);
-        });
-    </script>
+            <!-- Skill Category 3 -->
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <i class="fas fa-chart-bar"></i>
+                </div>
+                <h3 class="skill-title">Analytics & Viz</h3>
+                <ul class="skill-list">
+                    <li><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                            style="width: 30px; height: 1.2rem; display: inline-block; vertical-align: middle; margin-right: 10px; fill: #E97627;">
+                            <path
+                                d="M11.654.174V2.377H9.682v.58h1.972V5.16h.696V2.957h1.97v-.58h-1.97V.174h-.348zm6.03 2.262l-.002 1.623v1.623h-2.957v.927h2.957v3.188H18.725l.011-1.582.02-1.576 1.465-.02 1.46-.01v-.927H18.728V2.436h-.522zm-12.407.06V5.686H2.291v.925H5.277V9.801h.985V6.61h3.013v-.925H6.262V2.496H5.77zm6.086 5.27v3.593H8.06v1.188h3.304v3.596h1.28v-3.596H15.953v-1.188H12.643V7.766h-.637zm9.721 1.55v2.221h-2.012v.811h2.012v2.261h.887v-2.261H24v-.811h-2.029V9.317h-.422zm-19.111.131V11.621H0v.621H1.973v2.194H2.64v-2.194h2v-.62H2.609V9.446h-.318zm15.709 4.516v3.254h-3.016v.927h3.016v3.217h1.072v-3.216H21.74v-.928H18.754v-3.254h-.533zm-12.463.008v3.246H2.262v.928h2.957v3.189H6.32v-3.189h2.955v-.928H6.32V13.97h-.55zm6.316 4.578l.002 1.103v1.1H9.566v.812h1.971v2.262h.928l.012-1.119.017-1.143H14.463v-.812h-2V18.549h-.465z" />
+                        </svg> Tableau</li>
+                    <li><i class="fas fa-chart-pie" style="color: #F2C811;"></i> Power BI</li>
+                    <li><i class="fas fa-cloud" style="color: #4285F4;"></i> Looker</li>
+                    <li><i class="devicon-pandas-plain colored"></i> Pandas/NumPy</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="section-header">
+            <span class="section-tag">Portfolio</span>
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-desc">A selection of end-to-end data engineering, analytics, and AI projects.</p>
+        </div>
+
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <div class="project-content">
+                    <span class="project-overline">GenAI & Engineering</span>
+                    <h3 class="project-title">ApplyPro AI</h3>
+                    <p class="project-desc">
+                        An LLM-powered job application assistant that automates resume tailoring and cover letter
+                        generation. Built with OpenAI API and LangChain.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">OpenAI API</span>
+                        <span class="tech-tag">LangChain</span>
+                        <span class="tech-tag">Streamlit</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/pyou-7/ApplyPro-AI-An-LLM-Powered-Job-Application-Assistant"
+                            class="project-link" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card">
+                <div class="project-content">
+                    <span class="project-overline">Cloud Architecture</span>
+                    <h3 class="project-title">NBA Serverless Pipeline</h3>
+                    <p class="project-desc">
+                        End-to-end serverless data pipeline on AWS. Ingests NBA game data, processes it with
+                        Lambda/Glue, and stores it in S3/DynamoDB for analytics.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">AWS Lambda</span>
+                        <span class="tech-tag">Amazon S3</span>
+                        <span class="tech-tag">AWS Glue</span>
+                        <span class="tech-tag">DynamoDB</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/pyou-7/NBA-Playoffs-Serverless-Data-Pipeline" class="project-link"
+                            target="_blank"><i class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card">
+                <div class="project-content">
+                    <span class="project-overline">Data Warehousing</span>
+                    <h3 class="project-title">Tokyo Olympic Pipeline</h3>
+                    <p class="project-desc">
+                        Orchestrated data pipeline using Azure Data Factory to ingest Olympic datasets, transform them
+                        with Databricks, and load into Synapse Analytics.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Azure Data Factory</span>
+                        <span class="tech-tag">Databricks</span>
+                        <span class="tech-tag">Synapse Analytics</span>
+                        <span class="tech-tag">Spark</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/pyou-7/tokyo-olympic-azure-data-engineering-project"
+                            class="project-link" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project-card">
+                <div class="project-content">
+                    <span class="project-overline">Machine Learning</span>
+                    <h3 class="project-title">Credit Default Prediction</h3>
+                    <p class="project-desc">
+                        Predictive model to assess credit risk using historical financial data. Implemented XGBoost and
+                        Random Forest classifiers with 92% accuracy.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Scikit-Learn</span>
+                        <span class="tech-tag">XGBoost</span>
+                        <span class="tech-tag">Pandas</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/pyou-7/Credit_Card_Default_Prediction" class="project-link"
+                            target="_blank"><i class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="project-card">
+                <div class="project-content">
+                    <span class="project-overline">Data Analysis</span>
+                    <h3 class="project-title">COVID-19 Analysis</h3>
+                    <p class="project-desc">
+                        Comprehensive analysis of global COVID-19 trends. Created interactive visualizations to track
+                        infection rates and vaccination progress.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">R</span>
+                        <span class="tech-tag">Tidyverse</span>
+                        <span class="tech-tag">Ggplot2</span>
+                        <span class="tech-tag">Tableau</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/pyou-7/Covid-19-Data-Analysis" class="project-link"
+                            target="_blank"><i class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="project-card">
+                <div class="project-content">
+                    <span class="project-overline">Visualization</span>
+                    <h3 class="project-title">Rental Dashboard</h3>
+                    <p class="project-desc">
+                        Interactive dashboard for analyzing rental market trends. Provides insights on pricing,
+                        location, and amenities to guide investment decisions.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Tableau</span>
+                        <span class="tech-tag">SQL</span>
+                        <span class="tech-tag">Excel</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/pyou-7/Rental-Dashboard" class="project-link" target="_blank"><i
+                                class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">What's Next?</h2>
+        <h1 class="contact-title">Get In Touch</h1>
+        <p class="contact-text">
+            I'm currently looking for new opportunities. Whether you have a question or just want to say hi,
+            I'll try my best to get back to you!
+        </p>
+        <a href="mailto:patyou1209@gmail.com" class="cta-button">Say Hello</a>
+        <div class="social-links">
+            <a href="https://github.com/pyou-7" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/jialinyou" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:patyou1209@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+    </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <span class="footer-logo">Jialin You.</span>
+                <p class="footer-role">Data Engineer & Analytics Specialist</p>
+            </div>
+            <div class="footer-right">
+                <div class="social-links-footer">
+                    <a href="https://github.com/pyou-7" target="_blank" aria-label="GitHub"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/jialinyou" target="_blank" aria-label="LinkedIn"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="mailto:patrick.you@outlook.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Jialin You. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>

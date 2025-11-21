@@ -1,0 +1,385 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Jialin You - Data Engineer Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+    <style>
+        .custom-icon-size {
+            font-size: 3em;
+            /* Adjust this value to make the icon larger or smaller */
+        }
+
+        .projects-container,
+        .dashboards-container {
+            display: flex;
+            flex-direction: row;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .project,
+        .dashboard {
+            flex: 0 0 100%;
+            display: none;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .project.active,
+        .dashboard.active {
+            display: block;
+            opacity: 1;
+        }
+
+        .scroll-button {
+            color: white;
+            height: 60px;
+            width: 60px;
+            line-height: 58px;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            z-index: 10;
+            font-size: 3em;
+        }
+
+        .scroll-button.left {
+            left: -80px;
+            /* Adjust this value to move the button outside the black box */
+        }
+
+        .scroll-button.right {
+            right: -80px;
+            /* Adjust this value to move the button outside the black box */
+        }
+
+        .contact-info {
+            margin: 2em 0;
+        }
+
+        .contact-info .item {
+            margin-bottom: 1.5em;
+        }
+
+        .contact-info .label {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 0.5em;
+            display: block;
+        }
+
+        .contact-info .value {
+            font-size: 1.2em;
+            text-decoration: underline;
+        }
+
+        .contact-info .social-icons {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .contact-info .social-icons li {
+            margin-right: 1em;
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <div class="logo">
+                <i class="icon fa-gem"></i>
+            </div>
+            <div class="content">
+                <div class="inner">
+                    <h1>Jialin You Portfolio</h1>
+                    <p>Data Engineer | Analytics Engineer<br />
+                        Transforming raw data into scalable, actionable insights.</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#intro">Intro</a></li>
+                    <li><a href="#work">Projects</a></li>
+                    <li><a href="#dashboard">Dashboard</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Intro -->
+            <article id="intro">
+                <h2 class="major">About Me</h2>
+                <span class="image main"><img src="images/You_Patrick-006.jpg" alt="" /></span>
+                <p>Hello! I'm Jialin You, a passionate <strong>Data Engineer</strong> and <strong>Analytics
+                        Engineer</strong>. I specialize in building robust data pipelines, optimizing data storage, and
+                    enabling data-driven decision-making. Currently pursuing a Master of Science in Business Analytics
+                    at <strong>UCLA Anderson</strong>, I combine strong technical expertise with business acumen.</p>
+
+                <h3>Technical Skills</h3>
+                <ul>
+                    <li><strong>Languages:</strong> Python, SQL, Java</li>
+                    <li><strong>Cloud & Infrastructure:</strong> AWS, Azure, GCP, Databricks, Snowflake</li>
+                    <li><strong>Data Engineering:</strong> Apache Spark, Airflow, dbt, Azure Data Factory, ETL/ELT</li>
+                    <li><strong>Visualization:</strong> Tableau, Power BI</li>
+                </ul>
+
+                <p>My professional experience includes roles at <strong>Data-Sleek</strong> and <strong>Global Music
+                        Rights</strong>, where I designed and maintained scalable ETL pipelines, automated data
+                    workflows using Airflow and Azure Data Factory, and developed interactive dashboards. I thrive on
+                    solving complex data challenges and architecting solutions that turn data into a strategic asset.
+                </p>
+                <p>Check out my <a href="#work">projects</a> to see my work in action!</p>
+            </article>
+
+            <!-- Work -->
+            <article id="work">
+                <h2 class="major">Projects</h2>
+                <div class="projects-container" id="projects-container">
+                    <div class="project active">
+                        <header>
+                            <h2><a href="https://github.com/pyou-7/Machine-Learning-Final-Project/blob/main/MSBA_401_Final_Project_Group6.ipynb"
+                                    target="_blank">Credit Default Prediction</a></h2>
+                        </header>
+                        <a href="https://github.com/pyou-7/Machine-Learning-Final-Project/blob/main/MSBA_401_Final_Project_Group6.ipynb"
+                            target="_blank" class="image fit"><img src="images/creditdefault.png" alt="" /></a>
+                        <p><strong>Tech Stack:</strong> Python, Keras, GridSearchCV<br />
+                            Developed a Neural Network model to forecast credit card default payments. Optimized
+                            hyperparameters using GridSearchCV, achieving a <strong>12% improvement in
+                                accuracy</strong>. This project highlights my ability to build and deploy machine
+                            learning models for financial risk assessment.</p>
+                        <ul class="actions special">
+                            <li><a href="https://github.com/pyou-7/Machine-Learning-Final-Project/blob/main/MSBA_401_Final_Project_Group6.ipynb"
+                                    target="_blank" class="button">View Project</a></li>
+                        </ul>
+                    </div>
+                    <div class="project">
+                        <header>
+                            <h2><a href="https://github.com/pyou-7/SQL-Data-Cleaning-Projects" target="_blank">Data
+                                    Cleaning with SQL</a></h2>
+                        </header>
+                        <a href="https://github.com/pyou-7/SQL-Data-Cleaning-Projects" target="_blank"
+                            class="image fit"><img src="images/data_cleaning_sql.jpg" alt="" /></a>
+                        <p><strong>Tech Stack:</strong> SQL (Advanced)<br />
+                            Designed and executed complex SQL scripts to clean and standardize raw datasets from diverse
+                            sources. This project demonstrates mastery in data preprocessing, ensuring high data quality
+                            and consistency for downstream analysis.</p>
+                        <ul class="actions special">
+                            <li><a href="https://github.com/pyou-7/SQL-Data-Cleaning-Projects" target="_blank"
+                                    class="button">View Project</a></li>
+                        </ul>
+                    </div>
+                    <div class="project">
+                        <header>
+                            <h2><a href="https://github.com/pyou-7/SQL-Data-Analysis-Projects/tree/main"
+                                    target="_blank">Data Analysis with SQL</a></h2>
+                        </header>
+                        <a href="https://github.com/pyou-7/SQL-Data-Analysis-Projects/tree/main" target="_blank"
+                            class="image fit"><img src="images/data_analysis_sql.jpg" alt="" /></a>
+                        <p><strong>Tech Stack:</strong> SQL, Data Visualization<br />
+                            Performed exploratory data analysis (EDA) on complex datasets using advanced SQL queries.
+                            Extracted actionable insights and prepared data marts for reporting, showcasing the ability
+                            to bridge raw data and business intelligence.</p>
+                        <ul class="actions special">
+                            <li><a href="https://github.com/pyou-7/SQL-Data-Analysis-Projects/tree/main" target="_blank"
+                                    class="button">View Project</a></li>
+                        </ul>
+                    </div>
+                    <div class="project">
+                        <header>
+                            <h2><a href="https://github.com/pyou-7/Impact-of-Covid-19-on-Different-Industries-in-the-U.S./tree/main"
+                                    target="_blank">COVID-19 Impact Analysis</a></h2>
+                        </header>
+                        <a href="https://github.com/pyou-7/Impact-of-Covid-19-on-Different-Industries-in-the-U.S./tree/main"
+                            target="_blank" class="image fit"><img src="images/Covid.jpg" alt="" /></a>
+                        <p><strong>Tech Stack:</strong> Python, Pandas, APIs<br />
+                            Built an end-to-end data pipeline collecting COVID-19 data from public APIs. Performed data
+                            cleaning and transformation using Pandas, followed by exploratory analysis to uncover trends
+                            across different industries.</p>
+                        <ul class="actions special">
+                            <li><a href="https://github.com/pyou-7/Impact-of-Covid-19-on-Different-Industries-in-the-U.S./tree/main"
+                                    target="_blank" class="button">View Project</a></li>
+                        </ul>
+                    </div>
+                    <div class="project">
+                        <header>
+                            <h2><a href="https://github.com/pyou-7/movie-correlation-analysis/blob/main/Movie%20Portfolio%20Project.ipynb"
+                                    target="_blank">Movies Correlation Analysis</a></h2>
+                        </header>
+                        <a href="https://github.com/pyou-7/movie-correlation-analysis/blob/main/Movie%20Portfolio%20Project.ipynb"
+                            target="_blank" class="image fit"><img src="images/movies.jpg" alt="" /></a>
+                        <p><strong>Tech Stack:</strong> Python, Pandas, Seaborn, Matplotlib<br />
+                            Conducted a comprehensive correlation analysis on a movie dataset. Utilized Python libraries
+                            for data manipulation and visualization to identify key factors influencing movie success.
+                        </p>
+                        <ul class="actions special">
+                            <li><a href="https://github.com/pyou-7/movie-correlation-analysis/blob/main/Movie%20Portfolio%20Project.ipynb"
+                                    target="_blank" class="button">View Project</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="scroll-button left" id="scroll-left">&lt;</div>
+                <div class="scroll-button right" id="scroll-right">&gt;</div>
+            </article>
+
+            <!-- Dashboard -->
+            <article id="dashboard">
+                <h2 class="major">Dashboards</h2>
+                <div class="dashboards-container" id="dashboards-container">
+                    <div class="dashboard active">
+                        <header>
+                            <h2><a href="https://public.tableau.com/app/profile/jialin.you7828/viz/UCLARentalPerformanceDashboard_17096925711060/RentalPerformance2"
+                                    target="_blank">Rental Performance Dashboard</a></h2>
+                        </header>
+                        <a href="https://public.tableau.com/app/profile/jialin.you7828/viz/UCLARentalPerformanceDashboard_17096925711060/RentalPerformance2"
+                            target="_blank" class="image fit"><img src="images/Rental Performance.png"
+                                alt="Visualization 1" /></a>
+                        <p><strong>Tech Stack:</strong> Tableau, SQL<br />
+                            Interactive dashboard visualizing rental performance metrics including daily trends, film
+                            categories, and revenue analysis. Enables stakeholders to identify top-performing assets and
+                            optimize inventory.</p>
+                        <ul class="actions special">
+                            <li><a href="https://public.tableau.com/app/profile/jialin.you7828/viz/UCLARentalPerformanceDashboard_17096925711060/RentalPerformance2"
+                                    target="_blank" class="button">View Visualization</a></li>
+                        </ul>
+                    </div>
+                    <div class="dashboard">
+                        <header>
+                            <h2><a href="https://public.tableau.com/app/profile/jialin.you7828/viz/MSBA405SAKILACustomersIn-DepthAnalysis/Dashboard1"
+                                    target="_blank">Customers In-Depth Analysis</a></h2>
+                        </header>
+                        <a href="https://public.tableau.com/app/profile/jialin.you7828/viz/MSBA405SAKILACustomersIn-DepthAnalysis/Dashboard1"
+                            target="_blank" class="image fit"><img src="images/Dashboard 2.png"
+                                alt="Visualization 2" /></a>
+                        <p><strong>Tech Stack:</strong> Tableau, SQL<br />
+                            Comprehensive customer analysis dashboard focusing on segmentation and behavioral patterns.
+                            Provides actionable insights for targeted marketing strategies and customer retention.</p>
+                        <ul class="actions special">
+                            <li><a href="https://public.tableau.com/app/profile/jialin.you7828/viz/MSBA405SAKILACustomersIn-DepthAnalysis/Dashboard1"
+                                    target="_blank" class="button">View Visualization</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="scroll-button left" id="scroll-left-dashboard">&lt;</div>
+                <div class="scroll-button right" id="scroll-right-dashboard">&gt;</div>
+            </article>
+
+            <!-- Contact -->
+            <article id="contact">
+                <h2 class="major">Contact</h2>
+                <div class="contact-details">
+                    <div class="detail">
+                        <h3 class="label">Location</h3>
+                        <p>Los Angeles, CA 90024</p>
+                    </div>
+                    <div class="detail">
+                        <h3 class="label">Email</h3>
+                        <p>jialin.you.2024@anderson.ucla.edu</a></p>
+                    </div>
+                    <div class="detail">
+                        <h3 class="label">Social</h3>
+                        <ul class="icons">
+                            <li><a href="https://www.linkedin.com/in/jialin-you/" class="icon brands fa-linkedin"><span
+                                        class="label">LinkedIn</span></a></li>
+                            <li><a href="https://github.com/pyou-7" class="icon brands fa-github"><span
+                                        class="label">GitHub</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+        </footer>
+
+    </div>
+
+    <!-- BG -->
+    <div id="bg"></div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            let currentProjectIndex = 0;
+            const projects = $('.project');
+            const totalProjects = projects.length;
+
+            let currentDashboardIndex = 0;
+            const dashboards = $('.dashboard');
+            const totalDashboards = dashboards.length;
+
+            function showProject(index) {
+                projects.removeClass('active').fadeOut();
+                $(projects[index]).fadeIn().addClass('active');
+            }
+
+            function showDashboard(index) {
+                dashboards.removeClass('active').fadeOut();
+                $(dashboards[index]).fadeIn().addClass('active');
+            }
+
+            $('#scroll-right').click(function () {
+                currentProjectIndex = (currentProjectIndex + 1) % totalProjects;
+                showProject(currentProjectIndex);
+            });
+
+            $('#scroll-left').click(function () {
+                currentProjectIndex = (currentProjectIndex - 1 + totalProjects) % totalProjects;
+                showProject(currentProjectIndex);
+            });
+
+            $('#scroll-right-dashboard').click(function () {
+                currentDashboardIndex = (currentDashboardIndex + 1) % totalDashboards;
+                showDashboard(currentDashboardIndex);
+            });
+
+            $('#scroll-left-dashboard').click(function () {
+                currentDashboardIndex = (currentDashboardIndex - 1 + totalDashboards) % totalDashboards;
+                showDashboard(currentDashboardIndex);
+            });
+
+            // Auto-scroll for projects
+            setInterval(function () {
+                currentProjectIndex = (currentProjectIndex + 1) % totalProjects;
+                showProject(currentProjectIndex);
+            }, 10000); // 10 seconds
+
+            // Auto-scroll for dashboards
+            setInterval(function () {
+                currentDashboardIndex = (currentDashboardIndex + 1) % totalDashboards;
+                showDashboard(currentDashboardIndex);
+            }, 10000); // 10 seconds
+
+            // Initially show the first project and dashboard
+            showProject(currentProjectIndex);
+            showDashboard(currentDashboardIndex);
+        });
+    </script>
+
+</body>
+
+</html>
